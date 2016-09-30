@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+        
+        <title>Rock 'n poll</title>
+	  	<meta name="description" content="Polls explained with interactive graphics.">
+
+	  	<meta property="og:title" content="Rock 'n Poll" />
+	  	<meta property="og:url" content="http://rocknpoll.graphics" />
+	  	<meta property="og:description" content="Polls explained with interactive graphics." />
+	  	<meta property="og:type" content="website" />
+	  	<meta property="og:image" content="http://rocknpoll.graphics/img/promo_rocknpoll.png" />
+	  	<meta property="og:image:url" content="http://rocknpoll.graphics/img/promo_rocknpoll.png" />
+  
+  		<link rel="shortcut icon" type="image/png" href="img/favicon3.png" />
+        
+        <link rel="stylesheet" href="https://code.getmdl.io/1.1.1/material.indigo-teal.min.css" />
+		<link href='https://fonts.googleapis.com/css?family=Crimson+Text' rel='stylesheet' type='text/css'>
+		<link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+		<link rel="stylesheet" href="css/polls.css" />
+
+		<script src="https://storage.googleapis.com/code.getmdl.io/1.0.6/material.min.js"></script>
+	</head>
+	<body>
+        
+		<div class="container">
+
+		<div id="left">
+			<!--<div id="textcontent">-->
+				<section id="step0" class="step">
+					<h1 class="center">Are these Samples Ample?</h1>
+                    <h2 class="center">A game to build your intuition about margins of error in sampling.</h2>
+                    <p class="center">To echo <A href="https://twitter.com/maartenzam" style="color: #3f51b5;">@maartenzam</A>, whose excellent work at rockn.poll is the basis for this, we'll do all of this without a single statistical formula. That is a promise.</p>
+					<p class="center">
+                        <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--colored mdl-button--mini-fab next">
+                            <i class="material-icons">beenhere</i>
+                        </button>
+					</p>
+				</section>
+				
+				<section class="step" id="step1">
+					<h2>If only...</h2>
+					<p>Imagine a group of people who are going to vote for one of eight candidates.  They each have some opinion, but we don't know everything and don't know what that is.</p>
+          <p>But this is a game, so let's pretend we know everything.</p>
+          <p class="center"><button id="showcolor" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--primary">Pretend</button></p>
+					<p class="feedback feedback1" id="feedback1">Nice! As you can see all is clear!</p>
+					<p class="center feedback feedback1">
+                        <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--colored mdl-button--mini-fab next">
+                            <i class="material-icons">beenhere</i>
+                        </button>
+					</p>
+				</section>
+				
+        <section class="step" id="step2">
+          <h2>Reality</h2>
+          <p>But sadly the world isn't that simple and we don't know everything.</p>
+          <p class="center"><button id="moveup" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--primary">Back to reality</button></p>
+          <p class="feedback feedback1" id="feedback1">Okay, back to reality.  What can we do from here?  Let's start by asking a few people.</p>
+          <p class="center feedback feedback1">
+                        <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--colored mdl-button--mini-fab next">
+                            <i class="material-icons">beenhere</i>
+                        </button>
+          </p>
+        </section>
+<!-- 				<section class="step" id="step2">
+					<h2>Counting</h2>
+					<p>The votes are in, let's take a look.</p>
+					<p class="center"><button id="sort" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--primary">Sort the voters</button></p><p class="feedback feedback2">Ok. That makes it a little easier to count the votes.</p>
+					<p class="feedback feedback2 center"><button id="lineup" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--primary">Count the votes</button></p><p class="feedback feedback3">The Reds party was the clear winner of the elections in PollLand, with almost 32 % of the votes.</p>
+					<p class="center feedback feedback3">
+                        <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--colored mdl-button--mini-fab next">
+                            <i class="material-icons">beenhere</i>
+                        </button>
+					</p>
+				</section> -->
+				
+<!-- 				<section class="step" id="step3">
+					<h2>Polls</h2>
+					<p>Elections are only held every couple of years. To measure trends in political preferences in between elections, speciallized polling companies conduct surveys, often commissioned by newspapers and tv stations.</p><p>Let's simulate that. At the same time we conduct a thought experiment: we assume every PollLandian still has the same political preference as during the last election. So the ideal poll should generate results equal to the elecion results.</p>
+</p><p class="center"><button id="moveup" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--primary">Get ready for the poll</button></p>
+					<p class="feedback feedback4">Ok, let's go!</p>
+					<p class="center feedback feedback4">
+                        <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--colored mdl-button--mini-fab next">
+                            <i class="material-icons">beenhere</i>
+                        </button>
+					</p>
+				</section> -->
+
+				<section class="step" id="step3">
+					<h2>A small sample</h2>
+					<p>We heard about simple randomized sampling, and so start calling people randomly.  We call until we get an answer, and these citizens are very helpful so they always answer us.</p><p>With the button below, you can add the answer of one interviewed PollLandian to the poll. After the first ten answers are in, our experiment can continue.</p>
+					<p class="center">
+						<button id="firstpoll" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--primary">Survey 1 PollLandian</button>
+					</p>
+					<p class="center">
+						<button id="lazybutton1" onclick="choice(10,true)" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--primary">Lazy button</button>
+					</p>
+					<p class="feedback feedback5">
+            All right. Let's see how well the sample matched this group.
+          </p>
+          <p class="feedback feedback5 center">
+            <button id="reveal" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--primary">Reveal</button>
+          </p>
+					<p class="center feedback">
+                        <button id="again" class="mdl-button mdl-js-button mdl-button--fab mdl-button--colored mdl-button--mini-fab">
+                            <i class="material-icons">beenhere</i>
+                        </button>
+					</p>
+				</section>
+
+				<section class="step" id="step2">
+					<h2>The first results</h2>
+					<p>The first results are in, but as you can see there are big differences between the polling percentages and the election results. Let's focus now on these differences</p><p>In this experiment we suppose that political preferences at the time of the survey are equal to those on election day. Every difference between polling and election results is completely due to the chance and uncertainty that come with surveys.</p>
+					<p class="feedback feedback5 center"><button onclick="showdiff()" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--primary">Check the differences</button></p>
+					<p class="feedback feedback6">
+  						Wow, those differences are quite large. Let's survey some more people to get more confident results.
+					</p>
+					<p class="center feedback feedback6">
+                        <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--colored mdl-button--mini-fab next">
+                            <i class="material-icons">beenhere</i>
+                        </button>
+					</p>
+				</section>
+
+				<section class="step" id="step6">
+					<h2>Fast forward</h2>
+					<p>Let's speed things up a little. With the button below, you can survey 10 people at once and their answers to the poll. This time we aim for at least 100 surveyed PollLandians. You can still add people to the poll one by one if you wish, to see the influence of adding 1 person on the polling results.</p>
+					<p class="center">
+						<button onclick="choice(1,false)" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--primary">1 voter</button>
+					</p>
+					<p class="center">
+						<button onclick="choice(10,false)" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--primary">10 voters</button>
+					</p>
+					<p class="center">
+						<button onclick="choice(100,true)" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--primary">Lazy button</button>
+					</p>
+					<p class="feedback feedback7">Nice job! Already surveyed 100 people. Did you notice that the differences between the polling and election results became smaller when you added more voters?</p>
+					<p class="center feedback feedback7">
+                        <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--colored mdl-button--mini-fab next">
+                            <i class="material-icons">beenhere</i>
+                        </button>
+					</p>
+				</section>
+
+				<section class="step" id="step7">
+					<h2>A real life poll</h2>
+					<p>Let's take it 1 step further: now you can add 100 voters at once. This time we aim for 1000 voters in the survey, a number typically used for political polls in PollLandia and many other countries.</p>
+					<p class="center">
+						<button onclick="choice(1,false)" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--primary">1 voter</button>
+					</p>
+					<p class="center">
+						<button onclick="choice(10,false)" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--primary">10 voters</button>
+					</p>
+					<p class="center">
+						<button onclick="choice(100,false)" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--primary">100 voters</button>
+					</p>
+					<p class="center">
+						<button onclick="choice(1000,true)" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--primary">Lazy button</button>
+					</p>
+					<p class="feedback feedback8">Great: you completed a whole survey! But significant differences between polling percentages and the election results persist: for <span id="partijmax"></span> this difference is still <span id="diffmax"></span>.</p>
+					<p class="center feedback feedback8">
+                        <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--colored mdl-button--mini-fab next">
+                            <i class="material-icons">beenhere</i>
+                        </button>
+					</p>
+				</section>
+				
+				<section class="step" id="step8">
+					<h2>Polls are only polls</h2>
+					<p>Despite all your hard work to survey 1000 people, significant differences between what you measured and the real political preferences among the PollLand population persist.</p><p>Those differences can be completely attributed to chance: even in a survey of 1000 people voters for some parties will be overrepresented and voters for other parties will be underrepresented.</p>
+					<p class="center">
+                        <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--colored mdl-button--mini-fab next">
+                            <i class="material-icons">beenhere</i>
+                        </button>
+					</p>
+				</section>
+
+				<section class="step" id="step9">
+					<h2>8 polls at the same time</h2>
+					<p>We'll explore this a little further by conducting 8 polls at exactly the same moment, with exactly the same number of surveyed people, with the same method and among the same group of people. So it's reasonable to expect the results of all 8 polls to be the same. All deviations are completely due to chance.</p><p>Use the button below to generate 8 polls, of 1000 people each.</p>
+					<p class="center">
+						<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--primary pollgenerator">Generate new poll</button>
+					</p>
+					<p class="feedback feedback10">Nice. Let's check the differences with the real percentages among the PollLandians for all 8 parties.
+					<p class="center">
+						<button onclick="sortbars()" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--primary feedback feedback10">Differences by party</button>
+					</p>
+					<p class="feedback feedback11">
+					Quite some differences, right? And all just the result of chance.
+					</p>
+					<p class="center feedback feedback11">
+                        <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--colored mdl-button--mini-fab next">
+                            <i class="material-icons">beenhere</i>
+                        </button>
+					</p>
+
+				</section>
+
+				<section class="step" id="step10">
+					<h2>So?</h2>
+					<p>Of the 64 polling results, only <span id="zeroes" class="highlight"></span> were correct up to one decimal. <span class="highlight">So, giving importance to small differences in polling results is doesn't make much sense</span>. Displaying decimals misleadingly gives the impression of accuracy.</p>
+					<p><span id="twos"></span> times the deviation was greater than 2 percentage points, the largest difference was <span id="maxdev"></span> percentage point. <span class="highlight">Sheer chance can play a big part in seemingly big changes.</span></p>
+                    <p>When reporting on polling results is done well, the expected error is mentioned (the 'margin of error' or the 'confidence'). Now you know where this is coming from: <span class="highlight">randomness generates noise in the polling results.</span> So keep that in mind when you read or write about polling results.</p>
+                    <p class="center">
+                        <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--colored mdl-button--mini-fab final">
+                            <i class="material-icons">beenhere</i>
+                        </button>
+                    </p>
+
+				</section>
+                
+                <section id="finale" class="center">
+                    <h2>Ok, now what?</h2>
+                    <p>Here are some useful links in case you want to visualize uncertainty in polling results:
+                        <ul>
+                            <li><a href="http://www.visualisingdata.com/2015/02/references-visualising-uncertainty/" target="_blank">References for visualising uncertainty</a></li>
+                            <li><a href="http://graphics.cs.wisc.edu/Vis/ErrorBars/" target="_blank">Alternatives to error bars</a></li>
+                            <li><a href="http://datadrivenjournalism.net/news_and_analysis/ethics_in_data_journalism_margin_of_error_in_bureau_of_labor_statistics_rep" target="_blank">Ethics in Data Journalism: Margins of Error</a></li>
+                            <li><a href="https://medium.com/@uwdata/hypothetical-outcomes-plots-experiencing-the-uncertain-b9ea60d7c740#.d3frvqsrt" target="_blank">HOPs: Experiencing the Uncertain</a></li>
+                        </ul>
+                    </p>
+                    <h2>Special thanks to</h2>
+                        <p>
+                            <ul>
+                                <li><a href="https://twitter.com/ncasenmare" target="_blank">Nicky Case</a></li>
+                                <li><a href="https://twitter.com/nadiehbremer" target="_blank">Nadieh Bremer</a></li>
+                                <li><a href="https://twitter.com/_3s_" target="_blank">Dries Benoit</a></li>
+                                <li><a href="https://twitter.com/istvanhajnal" target="_blank">Istvan Hajnal</a></li>
+                                <li><a href="https://twitter.com/jburnmurdoch" target="_blank">John Burn Murdoch</a></li>
+                                <li><a href="https://twitter.com/albertocairo" target="_blank">Alberto Cairo</a></li>
+                            </ul>
+                        </p>
+                    <h2>About?</h2>
+                    <p class="center">
+                        <a href="/about.html">
+                        <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--colored mdl-button--mini-fab" >
+                            <i class="material-icons">info</i>
+                        </button>
+                        </a>
+                    </p>
+                    <h2>Again?</h2>
+                    <p class="center">
+                        <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--colored mdl-button--mini-fab" onclick="location.reload()">
+                            <i class="material-icons">restore_page</i>
+                        </button>
+                    </p>
+                </section>
+            
+			<!--</div>-->
+		</div>
+		
+		<div id="right">
+			<div id="vis">
+			</div>
+            <div id="credits">
+                <a href="/about.html" id="creditslink">
+                        <i class="material-icons">info</i>
+                </a>
+            </div>
+		</div>
+	
+	</div>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js" charset="utf-8"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.16.2/lodash.min.js"></script>
+
+		<script src="js/polls.js"></script>
+    
+        <!-- <script>
+          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+          })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+          ga('create', 'UA-73643807-1', 'auto');
+          ga('send', 'pageview');
+
+        </script> -->
+        <script>window.ga = function() {};</script>
+	
+	</body>
+</html>
