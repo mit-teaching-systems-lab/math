@@ -1,0 +1,9 @@
+version: "2"
+services:
+  notebook:
+    image: jupyter/datascience-notebook
+    ports:
+      - "8888:8888"
+    volumes:
+      - .:/src
+    working_dir: /src
